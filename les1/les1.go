@@ -10,4 +10,5 @@ func main() {
 		}
 	}()
 	panic("test panic")
+	fmt.Println("hellow")
 }
