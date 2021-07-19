@@ -1,5 +1,13 @@
 package main
 
+import (
+	"fmt"
+)
 func main() {
-	print("hellow")
+	defer func() {
+		if v := recover(); v != nil {
+			fmt.Println("recovered program", v)
+		}
+	}()
+	panic("test panic")
 }
